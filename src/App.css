@@ -6,12 +6,12 @@ body{
 }
 
 .card{
-  width: 60%;
+  width:60%;
   background-color: white;
   box-shadow: 0px 25px 44px 0px rgba(0,0,0,0.05);
   border-radius: 8px;
   min-width: 300px;
-  margin: auto;
+  justify-self: center;
 }
 
 .Input{
@@ -138,6 +138,7 @@ body{
 
 .toggle{
   margin-right: 8%;
+  cursor: pointer;
 }
 
 a.toggle{
@@ -162,4 +163,33 @@ a.toggle{
 
 .toggle:hover .line{
   width: 100%;
+}
+
+form{
+  align-self: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px){
+  .dual{
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+  }
+
+  body{
+    overflow-y: visible;
+  }
+
+  .card{
+    width: 70%;
+    min-width: 0;
+  }
+
+  .description{
+    margin: 10% 5% 10% 5%;
+    align-self: center;
+    justify-self: center;
+    word-wrap: normal;
+  }
+  
 }
