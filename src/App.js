@@ -5,12 +5,13 @@ import OnBoarding from './Screens/OnBoarding'
 import Profile from './Screens/Profile'
 import {Route, Router} from "react-router";
 import {BrowserRouter} from "react-router-dom";
+import Sidebar from './Components/Sidebar';
 
 function App() {
   return (
     <BrowserRouter>
       <Route exact path="/" component={OnBoarding} />
-      <Route exact path="/profile" component={Profile} />
+      <Route exact path="/profile" component={Sidebar} />
     </BrowserRouter>  
   );
 }
