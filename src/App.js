@@ -2,12 +2,16 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import OnBoarding from './Screens/OnBoarding'
-import Route from 'react-router'
-import RouteBrowser from 'react-router-dom'
+import Profile from './Screens/Profile'
+import {Route, Router} from "react-router";
+import {BrowserRouter} from "react-router-dom";
 
 function App() {
   return (
-    <OnBoarding />
+    <BrowserRouter>
+      <Route exact path="/" component={OnBoarding} />
+      <Route exact path="/profile" component={Profile} />
+    </BrowserRouter>  
   );
 }
 

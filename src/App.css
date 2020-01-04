@@ -111,19 +111,19 @@ body{
 }
 
 body{
-  background-image: url("./Assets/bg_main.jpg");
-  background-size: cover;
-  height: 1080px;
-  width: 1920px;
-  background-clip: content-box;
   overflow: hidden;
 }
 
 .filter{
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 1081px;
+  width: 3000px;
   background-color: rgba(0, 36, 36, 0.753);
+  background-image: url("./Assets/bg_main.jpg");
+  background-size: cover;
+  height: 1080px;
+  width: 1920px;
+  background-clip: content-box;
   z-index: -5;
 }
 
@@ -170,6 +170,17 @@ form{
   text-align: center;
 }
 
+.grid-container{
+  background-color: white;
+}
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1000px){
   .dual{
     grid-template-columns: 1fr;
@@ -191,5 +202,5 @@ form{
     justify-self: center;
     word-wrap: normal;
   }
-  
+
 }
