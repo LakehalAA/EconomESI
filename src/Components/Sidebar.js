@@ -5,27 +5,15 @@ export default props => {
   return (
     <Menu>
       <a className="menu-item" href="/">
-        Home
+        Profile
       </a>
 
-      <a className="menu-item" href="/laravel">
-        Laravel
+      <a className="menu-item" href="/depense">
+        Mes Depenses / Revenus
       </a>
 
-      <a className="menu-item" href="/angular">
-        Angular
-      </a>
-
-      <a className="menu-item" href="/react">
-        React
-      </a>
-
-      <a className="menu-item" href="/vue">
-        Vue
-      </a>
-
-      <a className="menu-item" href="/node">
-        Node
+      <a className="menu-item" href="/historique">
+        Historique
       </a>
     </Menu>
   );
