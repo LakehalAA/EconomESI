@@ -8,12 +8,13 @@ import {BrowserRouter} from "react-router-dom";
 import Sidebar from './Components/Sidebar';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Route exact path="/" component={OnBoarding} />
-      <Route exact path="/profile" component={Profile} />
-    </BrowserRouter>  
-  );
-}
+  localStorage.setItem("userid", undefined);
+  return(
+      <BrowserRouter>
+        <Route exact path="/" component={OnBoarding} />
+        <Route exact path="/profile" component={Profile} />
+      </BrowserRouter> 
+  ) 
+  }
 
 export default App;

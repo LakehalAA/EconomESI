@@ -2,11 +2,43 @@ import React, { Fragment } from "react";
 import Input from "../Components/Input";
 import Button from "../Components/Button";
 import logo from "../Assets/logo.png";
+import Axios from "axios";
 
 class OnBoarding extends React.Component {
   state = {
-    new: false
+    id:"",
+    new: false,
+    username: "frog",
+    passw: "frgfrgfrg",
   };
+
+  handleNameChange = (event) => {    
+    console.log(event.target.value);    
+    this.setState({
+        username: event.target.value,
+    });
+  }
+
+  handlePassChange = (event2) => {
+    this.setState({
+        passw: event2.target.value,
+    });
+  }
+
+  afterSubmission = (event3) => {
+    event3.preventDefault();
+    const user = {
+      username:this.state.username,
+      password:this.state.passw,
+    }
+
+    Axios.post('http://192.168.43.106:3000/login', {...user}).then(res =>{
+      localStorage.setItem("userid", res.data._id);
+      this.props.history.push('/profile');
+    }).catch(e =>{
+      console.log(e);
+    });
+  }
 
   switch = bool => {
     this.setState({ new: bool });
@@ -35,9 +67,9 @@ class OnBoarding extends React.Component {
             </a>
           </div>
           <img src={logo} height="200px" style={{ margin: "30px" }}></img>
-          <form action="/login" method="POST">
-            <Input ph="Username" type="text" name="username" />
-            <Input ph="Password" type="password" name="password" />
+          <form onSubmit={this.afterSubmission} action="/login" method="POST">
+            <Input ph="Username" type="text" name="username" onChange={this.handleNameChange} />
+            <Input ph="Password" type="password" name="password" onChange={this.handlePassChange} />
             <Button text="Log In" />
           </form>
         </div>
@@ -66,8 +98,8 @@ class OnBoarding extends React.Component {
 
           <img src={logo} height="200px" style={{ margin: "30px" }}></img>
 
-          <form action="/signup" method="POST">
-            <Input ph="Username" type="text" name="username" />
+          <form action="192.168.43.106:3000/signup" method="POST">
+            <Input ph="Username" type="text" name="username" onChange={(e)=>{console.log(e.target.value)}}/>
             <Input ph="Email" type="text" name="email" />
             <Input ph="Password" type="password" name="password" />
             <Button href="/profile" text="SIGN UP" />
