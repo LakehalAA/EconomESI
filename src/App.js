@@ -15,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Route exact path="/" component={OnBoarding} />
         <Route exact path="/profile" component={Profile} />
+        <Route exact path="/revdep" component={DepenseRevenu} />
       </BrowserRouter> 
   ) 
   }

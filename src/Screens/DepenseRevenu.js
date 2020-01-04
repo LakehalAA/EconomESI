@@ -4,6 +4,8 @@ import { Fragment } from "react";
 import Input from '../Components/Input';
 import OnBoarding from './OnBoarding';
 import Card from '../Components/Card';
+import Sidebar from "../Components/Sidebar";
+
 class DepenseRevenu extends React.Component {
     state = {
         new: false
@@ -83,6 +85,7 @@ class DepenseRevenu extends React.Component {
       render() {
         return (
           <Fragment>
+          <Sidebar />
            <div className="dual3">
              
              <div className="card"><h2>Votre solde est à : </h2></div>
