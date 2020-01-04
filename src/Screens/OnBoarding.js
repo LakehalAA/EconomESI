@@ -35,9 +35,9 @@ class OnBoarding extends React.Component {
             </a>
           </div>
           <img src={logo} height="200px" style={{ margin: "30px" }}></img>
-          <form action="/profile">
-            <Input ph="Username" type="text" />
-            <Input ph="Password" type="password" />
+          <form action="/login" method="POST">
+            <Input ph="Username" type="text" name="username" />
+            <Input ph="Password" type="password" name="password" />
             <Button text="Log In" />
           </form>
         </div>
@@ -66,10 +66,10 @@ class OnBoarding extends React.Component {
 
           <img src={logo} height="200px" style={{ margin: "30px" }}></img>
 
-          <form action="/profile">
-            <Input ph="Username" type="text" />
-            <Input ph="Email" type="password" />
-            <Input ph="Password" type="password" />
+          <form action="/signup" method="POST">
+            <Input ph="Username" type="text" name="username" />
+            <Input ph="Email" type="text" name="email" />
+            <Input ph="Password" type="password" name="password" />
             <Button href="/profile" text="SIGN UP" />
           </form>
         </div>
