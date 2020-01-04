@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 import logo from "../Assets/logo.png";
+import Sidebar from "../Components/Sidebar";
+import ProfileCard from "../Components/ProfileCard";
 
 class Profile extends React.Component{
 
@@ -7,7 +9,8 @@ class Profile extends React.Component{
     
     return(
       <div className="grid-container">
-        <div className="card">della3</div>
+        <Sidebar />
+        <ProfileCard />
       </div>
     )
   }

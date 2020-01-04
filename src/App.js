@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Route exact path="/" component={OnBoarding} />
-      <Route exact path="/profile" component={Sidebar} />
+      <Route exact path="/profile" component={Profile} />
     </BrowserRouter>  
   );
 }
