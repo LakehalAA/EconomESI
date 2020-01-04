@@ -82,7 +82,18 @@ body{
   padding-top: 15px;
   align-self: center !important;
 }
-
+.container2{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  align-self: center !important;
+  
+}
 .dual{
   height: 100%;
   width: 100%;
@@ -94,7 +105,30 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+.dual2{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  top: 60%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  
+}
+.dual3{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  top: 20%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  
+}
 .description{
   text-align: left;
   margin: 15%;
@@ -145,6 +179,7 @@ a.toggle{
   color: rgba(0, 0, 0, 0.5);
   text-decoration-line: none;
 }
+.test
 
 .active{
   font-weight: 600;
@@ -259,8 +294,20 @@ form{
   }
 
   .card{
-    width: 70%;
-    min-width: 0;
+    width: 50%;
+    
+    
+  }
+  .card-solde{
+    width:50%
+    
+    
+  }
+  .card2{
+    width: 50%;
+    padding-left: 20%;
+    
+    
   }
 
   .description{
